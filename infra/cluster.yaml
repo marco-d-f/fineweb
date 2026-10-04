@@ -1,0 +1,24 @@
+Region: us-east-1
+Image:
+  Os: ubuntu2404
+HeadNode:
+  InstanceType: t3.medium
+  Networking:
+    SubnetId: subnet-0f810762749eddef9
+  Ssh:
+    KeyName: fw-key
+    AllowedIps: 145.40.176.160/32
+Scheduling:
+  Scheduler: slurm
+  SlurmQueues:
+  - Name: cpu
+    CapacityType: SPOT
+    ComputeResources:
+    - Name: c7i4xlarge
+      Instances:
+      - InstanceType: c7i.4xlarge
+      MinCount: 0
+      MaxCount: 2
+    Networking:
+      SubnetIds:
+      - subnet-0f810762749eddef9
