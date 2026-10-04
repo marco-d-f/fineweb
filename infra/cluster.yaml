@@ -5,6 +5,13 @@ HeadNode:
   InstanceType: t3.medium
   Networking:
     SubnetId: subnet-0f810762749eddef9
+  CustomActions:
+    OnNodeConfigured:
+      Script: s3://marco-personal-fineweb/scripts/setup-headnode.sh
+  Iam:
+    S3Access:
+      - BucketName: marco-personal-fineweb
+        EnableWriteAccess: true
   Ssh:
     KeyName: fw-key
     AllowedIps: 145.40.176.160/32
