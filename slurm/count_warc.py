@@ -19,7 +19,7 @@ def count_warc_records(s3_path: str):
     print(f"SUCCESS: Counted {record_count:,} records in {s3_path}")
 
 if __name__ == "__main__":
-    default_warc = "s3://commoncrawl/crawl-data/CC-MAIN-2024-10/segments/1707947471018.26/warc/CC-MAIN-20240215082110-20240215112110-00000.warc.gz"
+    default_warc = "s3://commoncrawl/crawl-data/CC-MAIN-2024-10/segments/1707947473347.0/warc/CC-MAIN-20240220211055-20240221001055-00000.warc.gz"
     target_path = sys.argv[1] if len(sys.argv) > 1 else default_warc
     
     count_warc_records(target_path)
