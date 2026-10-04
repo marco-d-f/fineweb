@@ -22,3 +22,9 @@ Scheduling:
     Networking:
       SubnetIds:
       - subnet-0f810762749eddef9
+    Iam:
+        S3Access:
+          - BucketName: commoncrawl
+            EnableWriteAccess: false
+          - BucketName: marco-personal-fineweb
+            EnableWriteAccess: true
